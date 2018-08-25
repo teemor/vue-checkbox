@@ -1,52 +1,32 @@
 <template>
   <div id="app">
-    <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
-      <el-menu-item index="1">
-        <router-link to="/MobileIndex">MobileIndex</router-link>
+    <el-menu :default-active="activeIndex" router class="el-menu-demo" mode="horizontal" @select="handleSelect">
+      <el-menu-item index="1" :route="{path:'/Mint-UI'}">
+        Mint-UI
       </el-menu-item>
       <el-submenu index="2">
-        <template slot="title">我的工作台</template>
-        <el-menu-item index="2-1">
-          <router-link to="/ECheckBox">MobileIndex</router-link>
+        <template slot="title">element</template>
+        <el-menu-item index="2-1" :route="{path:'/Hello/ECheckBox'}">
+          ECheckBox
         </el-menu-item>
-        <el-menu-item index="2-2">
-          <router-link to="/ECheckBox">MobileIndex</router-link>
+        <el-menu-item index="2-2" :route="{path:'/Hello/ECheckBox'}">
+          ECheckBox
         </el-menu-item>
         <el-menu-item index="2-3">选项3</el-menu-item>
         <el-submenu index="2-4">
-          <template slot="title">选项4</template>
+          <template slot="title">Table</template>
           <el-menu-item index="2-4-1">选项1</el-menu-item>
-          <el-menu-item index="2-4-2">
-            <router-link to="/ECheckBox/Table">Table</router-link>
+          <el-menu-item index="2-4-2" :route="{path:'/Hello/Table'}">
+            Table
           </el-menu-item>
           <el-menu-item index="2-4-3">选项3</el-menu-item>
         </el-submenu>
       </el-submenu>
       <el-menu-item index="3" disabled>消息中心</el-menu-item>
-      <el-menu-item index="4">
-        <router-link to="/Tab">Tab</router-link>
+      <el-menu-item index="4" :route="{path:'/Tab'}">
+        Tab
       </el-menu-item>
     </el-menu>
-
-    <p>
-      <router-link to="/ECheckBox">
-        <el-dropdown>
-          <span class="el-dropdown-link">
-            下拉菜单
-            <i class="el-icon-arrow-down el-icon--right"></i>
-          </span>
-          <el-dropdown-menu slot="dropdown">
-            <el-dropdown-item>
-              <router-link to="/ECheckBox">黄金糕</router-link>
-            </el-dropdown-item>
-            <el-dropdown-item>狮子头</el-dropdown-item>
-            <el-dropdown-item>螺蛳粉</el-dropdown-item>
-            <el-dropdown-item disabled>双皮奶</el-dropdown-item>
-            <el-dropdown-item divided>蚵仔煎</el-dropdown-item>
-          </el-dropdown-menu>
-        </el-dropdown>
-      </router-link>
-    </p>
     <router-view></router-view>
   </div>
 </template>

@@ -14,19 +14,20 @@ export default new Router({
       component: Hello,
       children: [
         {
-          path: 'MobileIndex',
+          path: 'Mint-UI',
           component: MobileIndex,
         },
         {
-          path: 'ECheckBox',
-          component: ECheckBox,
+          path: '/Hello',
+          component: Hello,
           children: [
             {
-              path: 'Table',
-              redirect: to => {
-                'Table'
-              },
+              path: '/Hello/Table',
               component: Table
+            },
+            {
+              path: '/Hello/ECheckBox',
+              component: ECheckBox
             }
           ]
         },

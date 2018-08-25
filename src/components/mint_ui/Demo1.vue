@@ -9,13 +9,11 @@
     <mt-button @click="openToast" type="primary" size="small">点击弹出toast</mt-button>
     <mt-button @click.native="openConfirm" type="primary" size="small" cancelButtonText="can">提示框</mt-button>
     <mt-cell-swipe v-for="n in 15" :key="n" :right="rightButton" title="swipe me"></mt-cell-swipe>
-
     <mt-palette-button content="+" @expand="main_log('expand')" @expanded="main_log('expanded')" @collapse="main_log('collapse')" direction="rt" class="pb" :radius="80" ref="target_1" mainButtonStyle="color:yellow;background-color:#26a2ff;" :offset="Math.PI /4.4" style="left:30px;">
       <div class="my-icon-button indexicon icon-popup" @touchstart="sub_log(1)">文本</div>
       <div class="my-icon-button indexicon icon-popup" @touchstart="sub_log(2)">图片</div>
       <div class="my-icon-button indexicon icon-popup" @touchstart="sub_log(3)">音频</div>
       <div class="my-icon-button indexicon icon-popup" @touchstart="sub_log(4)">视频</div>
-
     </mt-palette-button>
   </div>
 </template>

@@ -1,6 +1,5 @@
 <template>
   <div class="hello">
-    <router-view></router-view>
     <div>
       <ul v-for="(child,index) in children" :key="index">
         <li style="float:left;list-style:none">{{child.label}}</li>

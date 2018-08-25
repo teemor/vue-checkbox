@@ -58,11 +58,11 @@
         },
         methods: {
             clickItem: function (checkedList, item) {
-                this.checkedList = checkedList
+                this.checkedList = checkedList;
                 this.item = item
             },
             clickChecked: function (checkedList, item) {
-                this.checkedList = checkedList
+                this.checkedList = checkedList;
                 this.item = item
             }
         }

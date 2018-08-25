@@ -1,28 +1,37 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import DCheckBox from '@/components/DCheckBox'
-import ECheckBox from '@/components/ECheckBox'
-import Example from '@/components/Example'
-
-Vue.use(Router)
+import ECheckBox from '@/components/checkbox/ECheckBox'
+import MobileIndex from '@/components/mint_ui/MobileIndex'
+import Hello from '@/components/Hello'
+import Tab from '@/components/tab/SelectTab'
+import Table from '@/components/table/Table'
+Vue.use(Router);
 
 export default new Router({
   routes: [
-
     {
       path: '/',
-      name: 'ECheckBox',
-      component: ECheckBox
-    },
-    {
-      path: '/',
-      name: 'DCheckBox',
-      component: DCheckBox
-    },
-    {
-      path: '/',
-      name: 'Example',
-      component: Example
+      component: Hello,
+      children: [
+        {
+          path: 'MobileIndex',
+          component: MobileIndex,
+        },
+        {
+          path: 'ECheckBox',
+          component: ECheckBox,
+          children: [
+            {
+              path: 'ECheckBox/Table',
+              component: Table
+            }
+          ]
+        },
+        {
+          path: 'Tab',
+          component: Tab
+        }
+      ]
     },
   ]
 })

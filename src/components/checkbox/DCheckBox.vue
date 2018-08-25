@@ -9,7 +9,6 @@
             <div>
                 <check-box-node v-for="(child,index) in model.child" :key="index" :node="child"></check-box-node>
             </div>
-
         </div>
     </div>
 </template>
@@ -41,17 +40,17 @@ export default {
   },
   methods: {
     changeAll: function(val) {
-      this.checkedcitys = val? this.model:[]
+      this.checkedcitys = val? this.model:[];
       this.changeSecond(this.checkedcitys)
     },
     changeSecond: function(val) {
-      console.log(val,3)
-      let arr=[]
-      let checkedCount = Object.keys(val).length
-      this.children =checkedCount >0 ? this.children :[]
+      console.log(val,3);
+      let arr=[];
+      let checkedCount = Object.keys(val).length;
+      this.children =checkedCount >0 ? this.children :[];
       for(let i=0;i<checkedCount;i++){
-      arr=  arr.concat(val[i].children)   
-      this.children = arr    
+      arr=  arr.concat(val[i].children);
+      this.children = arr
       }
       //全选
       this.checkall = checkedCount=== this.model.length
@@ -75,13 +74,12 @@ export default {
     //   if(checkedCount=== this.children.length){
     //           this.checkedcitys = this.model[val]
     //   }
-        // this.model[val] = 
+        // this.model[val] =
       // 全选
 
     },
     overShow: function(node) {
       this.showIndex = node
-      
     },
     outHide: function(node) {
        this.showIndex = -1

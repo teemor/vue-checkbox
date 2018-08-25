@@ -22,7 +22,10 @@ export default new Router({
           component: ECheckBox,
           children: [
             {
-              path: 'ECheckBox/Table',
+              path: 'Table',
+              redirect: to => {
+                'Table'
+              },
               component: Table
             }
           ]

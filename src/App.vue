@@ -12,7 +12,9 @@
         <el-menu-item index="2-2" :route="{path:'/Hello/ECheckBox'}">
           ECheckBox
         </el-menu-item>
-        <el-menu-item index="2-3">选项3</el-menu-item>
+        <el-menu-item index="2-3">
+          <icon name="jiahao"></icon>
+        </el-menu-item>
         <el-submenu index="2-4">
           <template slot="title">Table</template>
           <el-menu-item index="2-4-1">选项1</el-menu-item>
@@ -22,7 +24,7 @@
           <el-menu-item index="2-4-3">选项3</el-menu-item>
         </el-submenu>
       </el-submenu>
-      <el-menu-item index="3" disabled>消息中心</el-menu-item>
+      <el-menu-item index="3">i-view</el-menu-item>
       <el-menu-item index="4" :route="{path:'/Tab'}">
         Tab
       </el-menu-item>

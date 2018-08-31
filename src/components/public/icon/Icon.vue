@@ -1,11 +1,17 @@
 <template>
-    <i :class="'iconfont icon-'+name"></i>
+    <svg>
+        <use :xlink:href="`#${name}`"></use>
+    </svg>
 </template>
-<script>
-export default {
-    props:{
-        name:String
-    }
-}
-</script>
 
+<script>
+  export default {
+    name: 'icon',
+    props: {
+      name: {
+        type: String,
+        required: true,
+      },
+    },
+  }
+</script>

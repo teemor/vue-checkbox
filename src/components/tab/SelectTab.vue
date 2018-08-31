@@ -15,7 +15,13 @@
 
       }
     },
+     mounted(){
+        this.cnm()
+    },
     methods:{
+        cnm:function(){
+            console.log(this.$attrs,'en')
+        }
     }
   }
 </script>

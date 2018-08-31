@@ -8,7 +8,9 @@ import 'element-ui/lib/theme-chalk/index.css';
 import Mint from 'mint-ui';
 import 'mint-ui/lib/style.css';
 import './style/index.scss'
+import './assets/scan.js'
 import scan from './ScanFile.js'
+
 Vue.use(Mint)
 Vue.use(ElementUI)
 Vue.use(scan)

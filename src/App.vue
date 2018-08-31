@@ -9,8 +9,8 @@
         <el-menu-item index="2-1" :route="{path:'/Hello/ECheckBox'}">
           ECheckBox
         </el-menu-item>
-        <el-menu-item index="2-2" :route="{path:'/Hello/ECheckBox'}">
-          ECheckBox
+        <el-menu-item index="2-2" :route="{path:'/Hello/Upload'}">
+          Upload
         </el-menu-item>
         <el-menu-item index="2-3">
           <icon name="jiahao"></icon>
@@ -28,6 +28,7 @@
       <el-menu-item index="4" :route="{path:'/Tab'}">
         Tab
       </el-menu-item>
+      <el-menu-item index="5" :route="{path:'/Hello/Svg'}">svg</el-menu-item>
     </el-menu>
     <router-view></router-view>
   </div>
@@ -51,11 +52,11 @@ export default {
 
 <style>
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+	font-family: 'Avenir', Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-align: center;
+	color: #2c3e50;
+	margin-top: 60px;
 }
 </style>

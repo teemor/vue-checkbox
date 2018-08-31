@@ -1,7 +1,19 @@
 <template>
   <div>
     <p>
-     <router-view></router-view>
+      <router-view></router-view>
     </p>
   </div>
 </template>
+<script>
+export default {
+  mounted(){
+    this.hehe();
+  },
+  methods:{
+    hehe:function(){
+      console.log(this,'test')
+    }
+  }
+}
+</script>

@@ -5,6 +5,7 @@ import MobileIndex from '@/components/mint_ui/MobileIndex'
 import Hello from '@/components/Hello'
 import Tab from '@/components/tab/SelectTab'
 import Table from '@/components/table/Table'
+import Upload from '@/components/upload/UploadTest'
 Vue.use(Router);
 
 export default new Router({
@@ -28,6 +29,14 @@ export default new Router({
             {
               path: '/Hello/ECheckBox',
               component: ECheckBox
+            },
+            {
+              path: '/Hello/Upload',
+              component: Upload
+            },
+            {
+              path: '/Hello/Svg',
+              component: ()=> import('@/components/svg/Index')
             }
           ]
         },
